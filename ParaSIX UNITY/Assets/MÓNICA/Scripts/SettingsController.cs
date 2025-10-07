@@ -14,11 +14,16 @@ public class SettingsController : MonoBehaviour
     public Button buttonGraphics;
     public Button buttonControls;
 
+    public Button buttonClose;
+    public Canvas canvaSettings;
+    public Canvas canvaInterface;
+
     //GENERAL
     public TMP_Text textBrightness;
     public TMP_Text textMusic;
 
     public Image panelBrightness;
+    public Image panelBrightnessJuego;
     public float brightnessValue;
 
     public AudioSource musicSource;
@@ -45,6 +50,7 @@ public class SettingsController : MonoBehaviour
         //BRILLO
         sliderBrightness.value = PlayerPrefs.GetFloat("Brightness", 0);
         panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
+        panelBrightnessJuego.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
 
         //VOLUME
         sliderMusic.value = PlayerPrefs.GetFloat("Music", 0.25f);
@@ -101,6 +107,7 @@ public class SettingsController : MonoBehaviour
         brightnessValue = value;
         PlayerPrefs.SetFloat("Brightness", brightnessValue);
         panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
+        panelBrightnessJuego.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
     }
 
     //VOLUME
@@ -157,5 +164,11 @@ public class SettingsController : MonoBehaviour
         PlayerPrefs.SetInt("ResolutionValue", dropdownResolution.value);
         Resolution resolution = resolutions[value];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+    }
+
+    public void CloseSettings()
+    {
+        canvaSettings.enabled = false;
+        canvaInterface.enabled = true;
     }
 }
