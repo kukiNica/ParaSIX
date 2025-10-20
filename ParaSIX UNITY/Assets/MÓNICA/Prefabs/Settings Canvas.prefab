@@ -3966,7 +3966,7 @@ Canvas:
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 10
   m_TargetDisplay: 0
 --- !u!114 &5889901989399609228
 MonoBehaviour:
@@ -4028,9 +4028,11 @@ MonoBehaviour:
   buttonControls: {fileID: 6013824534025935538}
   buttonClose: {fileID: 1793361989921274215}
   canvaSettings: {fileID: 4609778806058417845}
+  canvaInterface: {fileID: 0}
   textBrightness: {fileID: 6202723991022600296}
   textMusic: {fileID: 6376264051338632612}
   panelBrightness: {fileID: 250078117926795713}
+  panelBrightnessJuego: {fileID: 0}
   brightnessValue: 0
   musicSource: {fileID: 0}
   musicValue: 0

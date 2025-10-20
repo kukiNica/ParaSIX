@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
+    bool isOpen = false;
+
     public GameObject general;
     public GameObject graphics;
     public GameObject controls;
@@ -45,7 +47,7 @@ public class SettingsController : MonoBehaviour
     void Start()
     {
         //Al abrir los ajustes
-        OpenGENERAL();
+        CloseSettings();
 
         //BRILLO
         sliderBrightness.value = PlayerPrefs.GetFloat("Brightness", 0);
@@ -60,6 +62,34 @@ public class SettingsController : MonoBehaviour
 
         //RESOLUTION
         CheckResolution();
+    }
+
+    public void Update()
+    {
+        if ((Input.GetKeyDown(KeyCode.Escape)) && isOpen == false)
+        {
+            OpenSettings();
+            OpenGENERAL();
+            isOpen = true;
+
+            if (isOpen == true)
+            {
+                Time.timeScale = 0f;
+            }
+
+            Debug.Log("open");
+        }
+        else if ((Input.GetKeyDown(KeyCode.Escape)) && isOpen == true)
+        {
+            CloseSettings();
+            isOpen = false;
+
+            if (isOpen == false)
+            {
+                Time.timeScale = 1f;
+            }
+            Debug.Log("closed");
+        }
     }
 
     public void OpenGENERAL()
@@ -169,6 +199,10 @@ public class SettingsController : MonoBehaviour
     public void CloseSettings()
     {
         canvaSettings.enabled = false;
-        canvaInterface.enabled = true;
+    }
+
+    public void OpenSettings()
+    {
+        canvaSettings.enabled = true;
     }
 }

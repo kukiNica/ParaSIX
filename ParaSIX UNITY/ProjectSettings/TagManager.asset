@@ -41,3 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Game
+    uniqueID: 985578193
+    locked: 0
+  - name: Questions
+    uniqueID: 3580335005
+    locked: 0
+  - name: Settings
+    uniqueID: 4232015129
+    locked: 0

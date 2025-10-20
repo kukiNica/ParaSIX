@@ -6,21 +6,56 @@ public class MovimientoDoctor : MonoBehaviour
 {
     [SerializeField] private float speed;
 
-    private Vector2 target;
+
+    private List<Vector2> waypoints = new List<Vector2>();
+    private Vector2 newWaypoint;
     private Camera cam;
+
+    int cont = 0;
 
     void Start()
     {
         cam = Camera.main;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (cont < 3)
         {
-            target = cam.ScreenToWorldPoint(Input.mousePosition);
+            if (Input.GetMouseButtonDown(0))
+            {
+                newWaypoint = cam.ScreenToWorldPoint(Input.mousePosition);
+                waypoints.Add(newWaypoint);
+                cont++;
+                Debug.Log(cont);
+            }
         }
-        transform.position = Vector2.MoveTowards(transform.position, target, speed * Time.deltaTime);
+        Move();
+    }
+
+    private void Move()
+    {
+        if (waypoints.Count == 0)
+        {
+            return;
+        }
+
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[0], speed * Time.deltaTime);
+
+        if ((Vector2)transform.position == waypoints[0])
+        {
+            waypoints.RemoveAt(0);
+            cont--;
+        }
+    }
+
+    private void OnDrawGizmos()
+    {
+        Gizmos.color = Color.red;
+
+        foreach(Vector2 waypoint in waypoints)
+        {
+            Gizmos.DrawSphere(waypoint, 0.1f);
+        }
     }
 }
