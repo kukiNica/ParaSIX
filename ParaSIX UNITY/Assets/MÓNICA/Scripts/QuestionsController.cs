@@ -16,11 +16,11 @@ public class QuestionsController : MonoBehaviour
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.F)) && isOpen == false && Level1Controller.isClose == true)
+        if ((Input.GetKeyDown(KeyCode.E)) && isOpen == false && Level1Controller.isClose == true)
         {
             OpenQUESTIONS();
         }
-        else if ((Input.GetKeyDown(KeyCode.F)) && isOpen == true)
+        else if ((Input.GetKeyDown(KeyCode.E)) && isOpen == true)
         {
             CloseQUESTIONS();
         }

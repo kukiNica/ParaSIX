@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
+    public GameObject game;
+
     bool isOpen = false;
 
     public GameObject general;
@@ -17,8 +19,7 @@ public class SettingsController : MonoBehaviour
     public Button buttonControls;
 
     public Button buttonClose;
-    public Canvas canvaSettings;
-    public Canvas canvaInterface;
+    public GameObject GOSettings;
 
     //GENERAL
     public TMP_Text textBrightness;
@@ -46,6 +47,8 @@ public class SettingsController : MonoBehaviour
 
     void Start()
     {
+        isOpen = false;
+
         //Al abrir los ajustes
         CloseSettings();
 
@@ -90,6 +93,22 @@ public class SettingsController : MonoBehaviour
             }
             Debug.Log("closed");
         }
+    }
+
+    public void CloseSettings()
+    {
+        GOSettings.SetActive(false);
+        game.SetActive(true);
+    }
+
+    public void OpenSettings()
+    {
+        GOSettings.SetActive(true);
+        game.SetActive(false);
+
+        OpenGENERAL();
+        CloseCONTROLS();
+        CloseGRAPHICS();
     }
 
     public void OpenGENERAL()
@@ -194,15 +213,5 @@ public class SettingsController : MonoBehaviour
         PlayerPrefs.SetInt("ResolutionValue", dropdownResolution.value);
         Resolution resolution = resolutions[value];
         Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
-    }
-
-    public void CloseSettings()
-    {
-        canvaSettings.enabled = false;
-    }
-
-    public void OpenSettings()
-    {
-        canvaSettings.enabled = true;
     }
 }

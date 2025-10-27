@@ -16,7 +16,8 @@ public class MenuController : MonoBehaviour
 
     void Start()
     {
-        canvaSettings.enabled = false;
+        PlayerPrefs.GetInt("unlocked2", 0);
+        PlayerPrefs.GetInt("unlocked3", 0);
     }
 
     public void ResumeGame()
@@ -31,8 +32,7 @@ public class MenuController : MonoBehaviour
 
     public void OpenSettings()
     {
-        canvaSettings.enabled = true;
-        canvaMenu.enabled = false;
+        
     }
 
     public void OpenCredits()

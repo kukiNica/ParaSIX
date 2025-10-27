@@ -250,6 +250,7 @@ GameObject:
   m_Component:
   - component: {fileID: 72560315}
   - component: {fileID: 72560316}
+  - component: {fileID: 72560317}
   m_Layer: 0
   m_Name: Menu.Manager
   m_TagString: Untagged
@@ -291,6 +292,21 @@ MonoBehaviour:
   buttonExit: {fileID: 38052874}
   canvaMenu: {fileID: 1882589904}
   canvaSettings: {fileID: 1053776512}
+--- !u!114 &72560317
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 72560314}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6012b79841117d243bb3953b5dba4b09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonLVL1: {fileID: 0}
+  buttonLVL2: {fileID: 0}
+  buttonLVL3: {fileID: 0}
 --- !u!1 &225136946
 GameObject:
   m_ObjectHideFlags: 0
@@ -427,6 +443,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 225136946}
   m_CullTransparentMesh: 1
+--- !u!1 &262497890 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1189006650981981773, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+  m_PrefabInstance: {fileID: 1777372270}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &270411739
 GameObject:
   m_ObjectHideFlags: 0
@@ -646,8 +667,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 72560316}
-        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+      - m_Target: {fileID: 1377933893}
+        m_TargetAssemblyTypeName: SettingsController, Assembly-CSharp
         m_MethodName: OpenSettings
         m_Mode: 1
         m_Arguments:
@@ -778,7 +799,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 375594161}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 72560317}
+        m_TargetAssemblyTypeName: NavigationController, Assembly-CSharp
+        m_MethodName: SceneMAP
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &375594161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1690,6 +1723,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1353906516}
   m_CullTransparentMesh: 1
+--- !u!114 &1377933893 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+  m_PrefabInstance: {fileID: 1777372270}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f6c187fe831d0c4e815e1e81a547e98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1644667414
 GameObject:
   m_ObjectHideFlags: 0
@@ -1956,9 +2000,21 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: game
+      value: 
+      objectReference: {fileID: 1882589901}
+    - target: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: GOSettings
+      value: 
+      objectReference: {fileID: 262497890}
+    - target: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
       propertyPath: musicSource
       value: 
       objectReference: {fileID: 1348911024}
+    - target: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: canvaSettings
+      value: 
+      objectReference: {fileID: 1053776512}
     - target: {fileID: 1606420824193892189, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
       propertyPath: canvaInterface
       value: 
