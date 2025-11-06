@@ -20,7 +20,7 @@ public class MovimientoDoctor : MonoBehaviour
 
     void Update()
     {
-        if (cont < 3)
+        /*if (cont < 3)
         {
             if (Input.GetMouseButtonDown(0))
             {
@@ -29,7 +29,16 @@ public class MovimientoDoctor : MonoBehaviour
                 cont++;
                 Debug.Log(cont);
             }
+        }*/
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            newWaypoint = cam.ScreenToWorldPoint(Input.mousePosition);
+            waypoints.Add(newWaypoint);
+            cont++;
+            Debug.Log(cont);
         }
+
         Move();
     }
 
@@ -40,15 +49,17 @@ public class MovimientoDoctor : MonoBehaviour
             return;
         }
 
-        transform.position = Vector2.MoveTowards(transform.position, waypoints[0], speed * Time.deltaTime);
+        transform.position = Vector2.MoveTowards(transform.position, newWaypoint, speed * Time.deltaTime);
 
+        
         if ((Vector2)transform.position == waypoints[0])
         {
             waypoints.RemoveAt(0);
             cont--;
         }
     }
-
+    
+    /*
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
@@ -57,5 +68,5 @@ public class MovimientoDoctor : MonoBehaviour
         {
             Gizmos.DrawSphere(waypoint, 0.1f);
         }
-    }
+    }*/
 }

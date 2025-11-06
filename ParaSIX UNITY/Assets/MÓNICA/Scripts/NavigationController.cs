@@ -43,7 +43,7 @@ public class NavigationController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(unlocked2);
+        
     }
 
     public void UnlockLevels()
