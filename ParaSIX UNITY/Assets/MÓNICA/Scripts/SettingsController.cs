@@ -6,10 +6,13 @@ using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
+    [Header("Game Window")]
+    [Tooltip("Game canvas/window.")]
     public GameObject game;
 
     bool isOpen = false;
 
+    [Header("Settings Canvas")]
     public GameObject general;
     public GameObject graphics;
     public GameObject controls;
@@ -18,15 +21,18 @@ public class SettingsController : MonoBehaviour
     public Button buttonGraphics;
     public Button buttonControls;
 
+    [Tooltip("Closes settings canva.")]
     public Button buttonClose;
     public GameObject GOSettings;
 
     //GENERAL
+    [Header("General Settings")]
     public TMP_Text textBrightness;
     public TMP_Text textMusic;
 
     public Image panelBrightness;
-    public Image panelBrightnessJuego;
+    [Tooltip("Game panel for the game brightness.")]
+    public Image panelBrightnessGame;
     public float brightnessValue;
 
     public AudioSource musicSource;
@@ -36,6 +42,7 @@ public class SettingsController : MonoBehaviour
     public Slider sliderMusic;
 
     //GRAPHICS
+    [Header("Graphics Settings")]
     public TMP_Text textMode;
     public TMP_Dropdown dropdownMode;
 
@@ -55,7 +62,7 @@ public class SettingsController : MonoBehaviour
         //BRILLO
         sliderBrightness.value = PlayerPrefs.GetFloat("Brightness", 0);
         panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
-        panelBrightnessJuego.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
+        panelBrightnessGame.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
 
         //VOLUME
         sliderMusic.value = PlayerPrefs.GetFloat("Music", 0.25f);
@@ -79,8 +86,6 @@ public class SettingsController : MonoBehaviour
             {
                 Time.timeScale = 0f;
             }
-
-            Debug.Log("open");
         }
         else if ((Input.GetKeyDown(KeyCode.Escape)) && isOpen == true)
         {
@@ -91,7 +96,6 @@ public class SettingsController : MonoBehaviour
             {
                 Time.timeScale = 1f;
             }
-            Debug.Log("closed");
         }
     }
 
@@ -156,7 +160,7 @@ public class SettingsController : MonoBehaviour
         brightnessValue = value;
         PlayerPrefs.SetFloat("Brightness", brightnessValue);
         panelBrightness.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
-        panelBrightnessJuego.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
+        panelBrightnessGame.color = new Color(panelBrightness.color.r, panelBrightness.color.g, panelBrightness.color.b, brightnessValue);
     }
 
     //VOLUME

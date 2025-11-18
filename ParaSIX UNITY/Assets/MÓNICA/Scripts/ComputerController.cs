@@ -36,6 +36,7 @@ public class ComputerController : MonoBehaviour
         game.gameObject.SetActive(false);
 
         isOpenPC = true;
+        Time.timeScale = 0;
     }
 
     public void ClosePC()
@@ -44,5 +45,6 @@ public class ComputerController : MonoBehaviour
         game.gameObject.SetActive(true);
 
         isOpenPC = false;
+        Time.timeScale = 1;
     }
 }

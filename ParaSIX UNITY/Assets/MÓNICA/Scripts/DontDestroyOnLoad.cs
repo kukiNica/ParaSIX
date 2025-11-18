@@ -10,9 +10,5 @@ public class DontDestroyOnLoad : MonoBehaviour
         {
             DontDestroyOnLoad(this.gameObject);
         }
-        else
-        {
-            Destroy(this.gameObject);
-        }
     }
 }

@@ -4,23 +4,27 @@ using UnityEngine;
 
 public class QuestionsController : MonoBehaviour
 {
+    public GameObject game;
+
     public GameObject panelQuestions;
 
-    bool isOpen = false;
+    public GameObject appereanceCanva;
+
+    public static bool isOpenQUESTIONS = false;
 
     void Start()
     {
         panelQuestions.SetActive(false);
-        isOpen = false;
+        isOpenQUESTIONS = false;
     }
 
     void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.E)) && isOpen == false && Level1Controller.isClose == true)
+        if ((Input.GetKeyDown(KeyCode.E)) && isOpenQUESTIONS == false && Level1Controller.isClose == true)
         {
             OpenQUESTIONS();
         }
-        else if ((Input.GetKeyDown(KeyCode.E)) && isOpen == true)
+        else if ((Input.GetKeyDown(KeyCode.E)) && isOpenQUESTIONS == true)
         {
             CloseQUESTIONS();
         }
@@ -29,12 +33,19 @@ public class QuestionsController : MonoBehaviour
     public void OpenQUESTIONS()
     {
         panelQuestions.SetActive(true);
-        isOpen = true;
+        isOpenQUESTIONS = true;
+
+        game.SetActive(false);
     }
 
     public void CloseQUESTIONS()
     {
         panelQuestions.SetActive(false);
-        isOpen = false;
+        isOpenQUESTIONS = false;
+
+        game.SetActive(true);
+
+        appereanceCanva.SetActive(false);
+        AppereanceController.isOpenAP = false;
     }
 }

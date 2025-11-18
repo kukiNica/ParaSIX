@@ -6,6 +6,7 @@ public class MovimientoDoctor : MonoBehaviour
 {
     [SerializeField] private float speed;
 
+    float velocityX;
 
     private List<Vector2> waypoints = new List<Vector2>();
     private Vector2 newWaypoint;
@@ -36,7 +37,6 @@ public class MovimientoDoctor : MonoBehaviour
             newWaypoint = cam.ScreenToWorldPoint(Input.mousePosition);
             waypoints.Add(newWaypoint);
             cont++;
-            Debug.Log(cont);
         }
 
         Move();
@@ -48,6 +48,8 @@ public class MovimientoDoctor : MonoBehaviour
         {
             return;
         }
+
+        velocityX = transform.position.x * speed;
 
         transform.position = Vector2.MoveTowards(transform.position, newWaypoint, speed * Time.deltaTime);
 
