@@ -31,14 +31,14 @@ public class NavigationController : MonoBehaviour
             buttonLVL2.gameObject.SetActive(true);
         }
 
-        if (LVL3Unlocked == false)
+        /*if (LVL3Unlocked == false)
         {
             buttonLVL3.gameObject.SetActive(false);
         }
         else
         {
             buttonLVL3.gameObject.SetActive(true);
-        }
+        }*/
     }
 
     void Update()

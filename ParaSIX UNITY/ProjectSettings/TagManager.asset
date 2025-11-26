@@ -50,3 +50,9 @@ TagManager:
   - name: Settings
     uniqueID: 4232015129
     locked: 0
+  - name: plano detalle infeccion
+    uniqueID: 4118968069
+    locked: 0
+  - name: sujeto
+    uniqueID: 1218703045
+    locked: 0
