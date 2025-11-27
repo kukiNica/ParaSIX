@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class NavigationController : MonoBehaviour
 {
-    public Button buttonLVL1;
-    public Button buttonLVL2;
-    public Button buttonLVL3;
-
     bool LVL2Unlocked = false;
     int unlocked2;
 
@@ -18,27 +14,7 @@ public class NavigationController : MonoBehaviour
 
     void Start()
     {
-        //MAP SCENE
-        unlocked2 = PlayerPrefs.GetInt("unlocked2", 0);
-        unlocked3 = PlayerPrefs.GetInt("unlocked3", 0);
-
-        if (LVL2Unlocked == false)
-        {
-            buttonLVL2.gameObject.SetActive(false);
-        }
-        else
-        {
-            buttonLVL2.gameObject.SetActive(true);
-        }
-
-        /*if (LVL3Unlocked == false)
-        {
-            buttonLVL3.gameObject.SetActive(false);
-        }
-        else
-        {
-            buttonLVL3.gameObject.SetActive(true);
-        }*/
+        
     }
 
     void Update()
