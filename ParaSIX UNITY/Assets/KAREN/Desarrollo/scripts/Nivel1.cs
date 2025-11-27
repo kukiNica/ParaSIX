@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -33,6 +34,8 @@ public class Nivel1 : MonoBehaviour
 
     void Update()
     {
+        distance = Vector3.Distance(area.transform.position, player.transform.position);
+        Debug.Log("DISTANCIA AL HABLAR: " + distance);
         distance = Vector2.Distance(area.transform.position, player.transform.position);
         distancePC = Vector2.Distance(areaPC.transform.position, player.transform.position);
 
@@ -80,4 +83,5 @@ public class Nivel1 : MonoBehaviour
     {
         PC.gameObject.SetActive(false);
     }
+   
 }

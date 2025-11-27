@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      primer plano parasito_0: 1954695019998070352
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      primer plano mano_0: 5231936914076050597
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      notas sprite 2_0: 6080790318822768536
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
