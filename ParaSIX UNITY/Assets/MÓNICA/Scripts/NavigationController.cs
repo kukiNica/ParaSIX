@@ -7,6 +7,7 @@ using UnityEngine.UI;
 public class NavigationController : MonoBehaviour
 {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
     public Button buttonLVL1;
     public Button buttonLVL2;
     public Button buttonLVL3;
@@ -64,6 +65,8 @@ public class NavigationController : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
     public void SceneLVL1() //LEVEL 1

@@ -8,9 +8,12 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-0:
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       value: 525755035501595e0f58547214265e44451641792f7a24687c7a1f6bb7b3356d
       flags: 0
     RecentlyUsedSceneGuid-1:
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
       value: 575207575c53515f5e0c597513710c444e4f4d2c2e7e7569782f4b31b5b3356a
@@ -31,6 +34,7 @@ EditorUserSettings:
       value: 5400070352560d095c560a24117a0d44104f412e7f2d7e697d281c6ae1b43539
       flags: 0
     RecentlyUsedSceneGuid-6:
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
       value: 5306020551020b0c0b0a0a7013725944174f4f282f7e726274714435b4b76c6d
       flags: 0
@@ -74,6 +78,13 @@ EditorUserSettings:
     RecentlyUsedSceneGuid-7:
       value: 50010356000c0d5a55565a7044220b44454f48727f2e23607a7c4835b7e2353e
       flags: 0
+=======
+      value: 5a06065455025f5a5f585e77427308444416197e282c763175794830b4b06069
+      flags: 0
+    RecentlyUsedSceneGuid-7:
+      value: 50010356000c0d5a55565a7044220b44454f48727f2e23607a7c4835b7e2353e
+      flags: 0
+>>>>>>> Stashed changes
     RecentlyUsedSceneGuid-8:
       value: 0553555257005809095e087a44215e444015402f7c2c74317b7c1e30e0b16468
       flags: 0
@@ -82,6 +93,9 @@ EditorUserSettings:
       flags: 0
     UnityRemoteCompression:
       value: 337f73
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
       flags: 0
     vcSharedLogLevel:
