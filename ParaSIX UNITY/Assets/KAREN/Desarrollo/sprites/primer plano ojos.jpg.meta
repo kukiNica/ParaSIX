@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      primer plano ojos_0: 7082488597219767140
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

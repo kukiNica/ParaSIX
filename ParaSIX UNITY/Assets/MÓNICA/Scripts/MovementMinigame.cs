@@ -28,5 +28,10 @@ public class MovementMinigame : MonoBehaviour
         {
             SceneManager.LoadScene("Diseño de Nivel 1");
         }
+        else if (collision.CompareTag("Entrance2"))
+        {
+            Debug.Log("Entrance");
+            SceneManager.LoadScene("Level 2");
+        }
     }
 }
