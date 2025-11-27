@@ -4030,7 +4030,6 @@ GameObject:
   - component: {fileID: 5889901989399609228}
   - component: {fileID: 3910123809447712072}
   - component: {fileID: 1606420824193892189}
-  - component: {fileID: 6426942824961195176}
   m_Layer: 5
   m_Name: Settings Canvas
   m_TagString: Untagged
@@ -4133,7 +4132,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f6c187fe831d0c4e815e1e81a547e98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  game: {fileID: 0}
   general: {fileID: 3437415864583396094}
   graphics: {fileID: 5723786781934107478}
   controls: {fileID: 525878418453020257}
@@ -4141,7 +4139,7 @@ MonoBehaviour:
   buttonGraphics: {fileID: 5730599713420563824}
   buttonControls: {fileID: 6013824534025935538}
   buttonClose: {fileID: 1793361989921274215}
-  GOSettings: {fileID: 0}
+  GOSettings: {fileID: 1189006650981981773}
   textBrightness: {fileID: 6202723991022600296}
   textMusic: {fileID: 6376264051338632612}
   panelBrightness: {fileID: 250078117926795713}
@@ -4156,18 +4154,6 @@ MonoBehaviour:
   textResolution: {fileID: 4303372515642830331}
   dropdownResolution: {fileID: 8884963079738188805}
   textGraphics: {fileID: 331317255393832302}
---- !u!114 &6426942824961195176
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6296332713872506498}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 04f03aa59523b1c4aa189657e6f6c5d0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &6713181082765497376
 GameObject:
   m_ObjectHideFlags: 0

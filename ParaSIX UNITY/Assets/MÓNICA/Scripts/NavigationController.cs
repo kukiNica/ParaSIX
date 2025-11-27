@@ -6,6 +6,7 @@ using UnityEngine.UI;
 
 public class NavigationController : MonoBehaviour
 {
+<<<<<<< Updated upstream
     public Button buttonLVL1;
     public Button buttonLVL2;
     public Button buttonLVL3;
@@ -63,9 +64,11 @@ public class NavigationController : MonoBehaviour
         }
     }
 
+=======
+>>>>>>> Stashed changes
     public void SceneLVL1() //LEVEL 1
     {
-        SceneManager.LoadScene("Level 1");
+        SceneManager.LoadScene("Diseño de Nivel 1");
     }
 
     public void SceneLVL2() //LEVEL 2
@@ -78,20 +81,23 @@ public class NavigationController : MonoBehaviour
         SceneManager.LoadScene("Level 3");
     }
 
-    public void SceneMinigame1() //MINIGAME FROM LEVEL 1 TO 2
+    public void SceneMinigame1() //MINIGAME OF LEVEL 1
     {
         SceneManager.LoadScene("Minigame 1");
     }
 
-    public void SceneMinigame2() //MINIGAME FROM LEVEL 2 TO 3
+    public void SceneMinigame2() //MINIGAME OF LEVEL 2
     {
         SceneManager.LoadScene("Minigame 2");
+    }
+
+    public void SceneMinigame3() //MINIGAME OF LEVEL 3
+    {
+        SceneManager.LoadScene("Minigame 3");
     }
 
     public void SceneMAP() //OPEN MAP
     {
         SceneManager.LoadScene("Map");
-        
-        UnlockLevels();
     }
 }

@@ -6,10 +6,6 @@ using UnityEngine.UI;
 
 public class SettingsController : MonoBehaviour
 {
-    [Header("Game Window")]
-    [Tooltip("Game canvas/window.")]
-    public GameObject game;
-
     bool isOpen = false;
 
     [Header("Settings Canvas")]
@@ -72,6 +68,8 @@ public class SettingsController : MonoBehaviour
 
         //RESOLUTION
         CheckResolution();
+
+        Time.timeScale = 1f;
     }
 
     public void Update()
@@ -102,13 +100,13 @@ public class SettingsController : MonoBehaviour
     public void CloseSettings()
     {
         GOSettings.SetActive(false);
-        game.SetActive(true);
+        Time.timeScale = 0f;
     }
 
     public void OpenSettings()
     {
         GOSettings.SetActive(true);
-        game.SetActive(false);
+        Time.timeScale = 1f;
 
         OpenGENERAL();
         CloseCONTROLS();

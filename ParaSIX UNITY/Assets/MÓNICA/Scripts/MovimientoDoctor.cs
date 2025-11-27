@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.SearchService;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MovimientoDoctor : MonoBehaviour
 {
@@ -60,7 +62,7 @@ public class MovimientoDoctor : MonoBehaviour
             cont--;
         }
     }
-    
+
     /*
     private void OnDrawGizmos()
     {
@@ -71,4 +73,6 @@ public class MovimientoDoctor : MonoBehaviour
             Gizmos.DrawSphere(waypoint, 0.1f);
         }
     }*/
+
+    
 }

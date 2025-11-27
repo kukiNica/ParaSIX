@@ -1,8 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 
 public class Level1Controller : MonoBehaviour
 {
@@ -39,6 +40,7 @@ public class Level1Controller : MonoBehaviour
 
     //CHARACTERS
     int cont = 0;
+    public TMP_Text textCont;
 
     void Start()
     {
@@ -46,8 +48,6 @@ public class Level1Controller : MonoBehaviour
         PC.gameObject.SetActive(false);
 
         decidePanel.SetActive(false);
-
-        cont++;
     }
 
     void Update()
@@ -146,25 +146,35 @@ public class Level1Controller : MonoBehaviour
         isOpenDecidePanel = false;
     }
 
-    public void Kill()
+    public void AddChars()
     {
         cont++;
-        CloseDecidePanel();
+        textCont.text = (cont + 1) + "/3";
 
-        if(cont == 4)
+        if (cont == 3)
         {
+            GameController.LVL2Unlocked = true;
             SceneManager.LoadScene("Map");
         }
     }
 
+    public void Kill()
+    {
+        AddChars();
+
+        CloseDecidePanel();
+    }
+
     public void Alive()
     {
-        cont++;
-        CloseDecidePanel();
+        AddChars();
 
-        if (cont == 4)
-        {
-            SceneManager.LoadScene("Map");
-        }
+        CloseDecidePanel();
+    }
+
+    public static void UnlockLVL2()
+    {
+        GameController.LVL2Unlocked = true;
+        SceneManager.LoadScene("Map");
     }
 }

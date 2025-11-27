@@ -242,7 +242,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 616366264}
         m_TargetAssemblyTypeName: NavigationController, Assembly-CSharp
-        m_MethodName: SceneMinigame1
+        m_MethodName: SceneMinigame2
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -543,8 +543,9 @@ GameObject:
   m_Component:
   - component: {fileID: 616366265}
   - component: {fileID: 616366264}
+  - component: {fileID: 616366266}
   m_Layer: 0
-  m_Name: Game.Manager
+  m_Name: Map.Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -562,9 +563,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6012b79841117d243bb3953b5dba4b09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  buttonLVL1: {fileID: 886540229}
-  buttonLVL2: {fileID: 30125228}
-  buttonLVL3: {fileID: 650898252}
 --- !u!4 &616366265
 Transform:
   m_ObjectHideFlags: 0
@@ -580,6 +578,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &616366266
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 616366263}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a925022d2fa323a45afb7ce592657ecd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttonLVL1: {fileID: 886540229}
+  buttonLVL2: {fileID: 30125228}
+  buttonLVL3: {fileID: 650898252}
 --- !u!1 &650898251
 GameObject:
   m_ObjectHideFlags: 0
@@ -645,7 +658,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 616366264}
         m_TargetAssemblyTypeName: NavigationController, Assembly-CSharp
-        m_MethodName: SceneMinigame2
+        m_MethodName: SceneMinigame3
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -836,7 +849,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 616366264}
         m_TargetAssemblyTypeName: NavigationController, Assembly-CSharp
-        m_MethodName: SceneLVL1
+        m_MethodName: SceneMinigame1
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

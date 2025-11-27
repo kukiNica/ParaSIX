@@ -14,37 +14,6 @@ public class MenuController : MonoBehaviour
     public Canvas canvaMenu;
     public Canvas canvaSettings;
 
-    void Start()
-    {
-        PlayerPrefs.GetInt("unlocked2", 0);
-        PlayerPrefs.GetInt("unlocked3", 0);
-    }
-
-    public void ResumeGame()
-    {
-
-    }
-
-    public void StartGame()
-    {
-
-    }
-
-    public void OpenSettings()
-    {
-        
-    }
-
-    public void OpenCredits()
-    {
-
-    }
-
-    public void CloseCredits()
-    {
-
-    }
-
     public void ExitGame()
     {
         Application.Quit();
