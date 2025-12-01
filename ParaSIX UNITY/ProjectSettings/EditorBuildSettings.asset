@@ -14,27 +14,12 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/M\xD3NICA/Scenes/Minigame 1.unity"
     guid: 902599f69127d4b46ac2b27cf702d9d5
-<<<<<<< Updated upstream
-=======
   - enabled: 1
     path: "Assets/M\xD3NICA/Desarrollo/Dise\xF1o de Nivel 1.unity"
     guid: fba42512d0d84ba46b8e0d2a65ccb100
-  - enabled: 1
-    path: "Assets/M\xD3NICA/Scenes/Level 1.unity"
-    guid: 3070e9da88624a4438083fe0755f5baf
   - enabled: 1
     path: "Assets/M\xD3NICA/Scenes/Minigame 2.unity"
     guid: 076c47b7fdf2c1f4a87bc642989f6785
->>>>>>> Stashed changes
-  - enabled: 1
-    path: "Assets/M\xD3NICA/Desarrollo/Dise\xF1o de Nivel 1.unity"
-    guid: fba42512d0d84ba46b8e0d2a65ccb100
-  - enabled: 1
-    path: "Assets/M\xD3NICA/Scenes/Level 1.unity"
-    guid: 3070e9da88624a4438083fe0755f5baf
-  - enabled: 1
-    path: "Assets/M\xD3NICA/Scenes/Minigame 3.unity"
-    guid: e6d6f2f9fb870364aaaccbec7bc64fa5
   - enabled: 1
     path: "Assets/M\xD3NICA/Scenes/Level 2.unity"
     guid: 5073bbcebf86c054e9488723cff87d40
@@ -44,8 +29,5 @@ EditorBuildSettings:
   - enabled: 1
     path: "Assets/M\xD3NICA/Scenes/Level 3.unity"
     guid: 5923d272940894e4fb426a325e46594a
-  - enabled: 1
-    path: Assets/KAREN/Desarrollo/escena2.unity
-    guid: 790eb02153199b84fb376eba3e593ef4
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0

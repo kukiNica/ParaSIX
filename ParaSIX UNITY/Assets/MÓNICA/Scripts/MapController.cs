@@ -11,10 +11,6 @@ public class MapController : MonoBehaviour
 
     void Start()
     {
-        Debug.Log(GameController.LVL1Unlocked);
-        Debug.Log(GameController.LVL2Unlocked);
-        Debug.Log(GameController.LVL3Unlocked);
-
         //MAP SCENE
         if (GameController.LVL2Unlocked == false)
         {

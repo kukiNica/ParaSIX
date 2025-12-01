@@ -20,7 +20,6 @@ public class QuestionsController : MonoBehaviour
 
     void Update()
     {
-        Debug.Log(Level1Controller.isClose);
         if ((Input.GetKeyDown(KeyCode.E)) && isOpenQUESTIONS == false && Level1Controller.isClose == true)
         {
             OpenQUESTIONS();

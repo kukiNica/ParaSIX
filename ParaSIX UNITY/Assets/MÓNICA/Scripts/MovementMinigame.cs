@@ -24,9 +24,17 @@ public class MovementMinigame : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        if (collision.CompareTag("Entrance2"))
+        {
+            Debug.Log("Entrance");
+            SceneManager.LoadScene("Level 2");
+        }
         if (collision.CompareTag("Entrada1"))
         {
+            Debug.Log("entrada");
             SceneManager.LoadScene("Diseño de Nivel 1");
         }
+        
+       
     }
 }

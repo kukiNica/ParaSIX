@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 11d37a76c2749cd43b5bde802f7b0cc6
+guid: 0365295dc420bbd4dac4b7671f9d4380
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 6080790318822768536
-    second: notas sprite 2_0
+      213: 6941142648078691762
+    second: Minijuego3_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: notas sprite 2_0
+      name: Minijuego3_0
       rect:
         serializedVersion: 2
-        x: 24
-        y: 17
-        width: 670
-        height: 326
+        x: 0
+        y: 0
+        width: 1825
+        height: 2048
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89fb01bd39e436450800000000000000
-      internalID: 6080790318822768536
+      spriteID: 2bd6b027674e35060800000000000000
+      internalID: 6941142648078691762
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      notas sprite 2_0: 6080790318822768536
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
