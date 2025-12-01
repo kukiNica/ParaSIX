@@ -1987,6 +1987,10 @@ PrefabInstance:
       propertyPath: panelBrightnessGame
       value: 
       objectReference: {fileID: 859349830}
+    - target: {fileID: 4609778806058417845, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 1348911022}
     - target: {fileID: 5344877803948807002, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
