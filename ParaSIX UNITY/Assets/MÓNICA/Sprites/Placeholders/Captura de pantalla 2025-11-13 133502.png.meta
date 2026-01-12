@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Captura de pantalla 2025-11-13 133502_0: 2679689236707941132
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

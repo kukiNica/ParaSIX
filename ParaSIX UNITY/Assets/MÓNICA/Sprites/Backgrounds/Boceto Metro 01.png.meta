@@ -130,7 +130,8 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Boceto Metro 01_0: -7757835596371527038
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
