@@ -5,14 +5,15 @@ using UnityEngine.UI;
 
 public class NotebookController : MonoBehaviour
 {
+    public GameObject gameUI;
+    public GameObject notebookUI;
+    
     public Button buttonOpenNOTEBOOK;
     public Button buttonCloseNOTEBOOK;
 
-    public GameObject notebook;
-
     void Start()
     {
-        notebook.gameObject.SetActive(false);
+        notebookUI.gameObject.SetActive(false);
     }
 
     void Update()
@@ -22,13 +23,14 @@ public class NotebookController : MonoBehaviour
 
     public void OpenNOTEBOOK()
     {
-        buttonOpenNOTEBOOK.gameObject.SetActive(false);
-        notebook.SetActive(true);
+        notebookUI.SetActive(true);
+
+        gameUI.SetActive(false);
     }
 
     public void CloseNOTEBOOK()
     {
-        notebook.SetActive(false);
-        buttonOpenNOTEBOOK?.gameObject.SetActive(true);
+        notebookUI.SetActive(false);
+        gameUI.SetActive(true);
     }
 }

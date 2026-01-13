@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: b9ccdceada5771746883ab18b19105a9
+guid: ad288b47c0b6da24f9d6121db322d121
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7411489279560532724
-    second: Boceto Refugio 01_0
+      213: -8006958544109390896
+    second: Notebook_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Boceto Refugio 01_0
+      name: Notebook_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1600
-        height: 1131
+        width: 2200
+        height: 1834
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -114,8 +114,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 4f242d46b36ead660800000000000000
-      internalID: 7411489279560532724
+      spriteID: 0d3b41770a191e090800000000000000
+      internalID: -8006958544109390896
       vertices: []
       indices: 
       edges: []
@@ -130,8 +130,7 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable:
-      Boceto Refugio 01_0: 7411489279560532724
+    nameFileIdTable: {}
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
