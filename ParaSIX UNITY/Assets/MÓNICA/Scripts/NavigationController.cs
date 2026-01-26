@@ -41,7 +41,7 @@ public class NavigationController : MonoBehaviour
 
     public void SceneLVL1() //LEVEL 1
     {
-        SceneManager.LoadScene("Diseño de Nivel 1");
+        SceneManager.LoadScene("Level 1");
     }
 
     public void SceneLVL2() //LEVEL 2

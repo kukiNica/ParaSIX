@@ -11,6 +11,11 @@ public class NotebookController : MonoBehaviour
     public Button buttonOpenNOTEBOOK;
     public Button buttonCloseNOTEBOOK;
 
+    public GameObject distanceNotebook;
+    public GameObject player;
+
+    float distance;
+
     void Start()
     {
         notebookUI.gameObject.SetActive(false);
@@ -18,7 +23,16 @@ public class NotebookController : MonoBehaviour
 
     void Update()
     {
-        
+        distance = Vector2.Distance(distanceNotebook.transform.position, player.transform.position);
+
+        if (distance < 1.9f)
+        {
+            buttonOpenNOTEBOOK.gameObject.SetActive(true);
+        }
+        else
+        {
+            buttonOpenNOTEBOOK.gameObject.SetActive(false);
+        }
     }
 
     public void OpenNOTEBOOK()
