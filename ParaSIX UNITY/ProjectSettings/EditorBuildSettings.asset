@@ -20,10 +20,10 @@ EditorBuildSettings:
   - enabled: 0
     path: "Assets/M\xD3NICA/Desarrollo/Dise\xF1o de Nivel 1.unity"
     guid: fba42512d0d84ba46b8e0d2a65ccb100
-  - enabled: 1
+  - enabled: 0
     path: "Assets/M\xD3NICA/Scenes/Minigame 2.unity"
     guid: 076c47b7fdf2c1f4a87bc642989f6785
-  - enabled: 1
+  - enabled: 0
     path: "Assets/M\xD3NICA/Scenes/Level 2.unity"
     guid: 5073bbcebf86c054e9488723cff87d40
   - enabled: 1

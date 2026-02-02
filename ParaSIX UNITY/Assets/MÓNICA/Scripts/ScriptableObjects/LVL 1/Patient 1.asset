@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 886f7d4f36e5f5f49b47d878c51d107d, type: 3}
+  m_Name: Patient 1
+  m_EditorClassIdentifier: 
+  appereance: 0
+  frontDetail: {fileID: 0}
+  front: {fileID: 0}
+  face: {fileID: 0}
+  leftHand: {fileID: 0}
+  rightHand: {fileID: 0}
+  leftFoot: {fileID: 0}
+  rightFoot: {fileID: 0}
+  patientBG: {fileID: -7064898146423829712, guid: 7b8812e1c71a88a4a86bf11ea8b1fc8f, type: 3}

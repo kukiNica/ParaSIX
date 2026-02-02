@@ -25,7 +25,7 @@ public class AppereanceController : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.F) && (isOpenAP == false) && (QuestionsController.isOpenQUESTIONS == true)) 
+        if (Input.GetKeyUp(KeyCode.F) && (isOpenAP == false))
         {
             OpenAP();
         }
