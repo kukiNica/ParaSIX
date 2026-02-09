@@ -476,9 +476,9 @@ MonoBehaviour:
   preguntaDocDOBLE1text: {fileID: 307982189}
   preguntaDocDOBLE2text: {fileID: 650599113}
   preguntaDocUnicatext: {fileID: 887220564}
-  preguntaDobleButton1: {fileID: 0}
-  preguntaDobleButton2: {fileID: 0}
-  preguntaUnicaButton: {fileID: 0}
+  preguntaDobleButton1: {fileID: 307982188}
+  preguntaDobleButton2: {fileID: 650599112}
+  preguntaUnicaButton: {fileID: 887220566}
   preguntaDobleGO: {fileID: 678205427}
   preguntaUnicaGO: {fileID: 1199997848}
 --- !u!1 &46027905
@@ -4047,7 +4047,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 43220575}
         m_TargetAssemblyTypeName: LVL1QuestionsController, Assembly-CSharp
-        m_MethodName: SeleccionRAMA
+        m_MethodName: SeleccionRespuesta
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

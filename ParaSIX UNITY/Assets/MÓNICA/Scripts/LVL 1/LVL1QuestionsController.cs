@@ -28,6 +28,8 @@ public class LVL1QuestionsController : MonoBehaviour
     //TIPO
     bool infectado;
 
+    bool esPregunta1, esPregunta2;
+
     //RAMAS
     bool ramaCotidiana, ramaContactoDirecto, ramaConfusionNeurologica;
 
@@ -36,16 +38,16 @@ public class LVL1QuestionsController : MonoBehaviour
 
     //PREGUNTAS PRINCIPALES
     string pregunta1 = "Explícame qué estabas haciendo cuando ocurrió la fuga.";
-    string pregunta2 = "¿Tuviste contacto físico o te acercaste demasiado al área contaminada o a aklguien que entró en ella?";
+    string pregunta2 = "¿Tuviste contacto físico o te acercaste demasiado al área contaminada o a alguien que entró en ella?";
 
     //RESPUESTAS PRINCIPALES
     string respuesta1_1 = "Estaba realizando mis tareas rutinarias, no noté nada fuera de lo normal."; //RAMA COTIDIANA
     string respuesta1_2 = "Intenté ayudar. Uno de los tanques tuvo una caída de presión y fui a revisar."; //RAMA CONTACTO DIRECTO
     string respuesta1_3 = "No… no estoy seguro. Fue todo muy rápido, no recuerdo bien el orden."; //RAMA CONFUSIÓN NEUROLÓGICA
 
-    string respuesta2_1 = "Sí, era parte del protocolo. Pero estoy completamente bien.”";
-    string respuesta2_2 = "Tal vez… Había mucha gente moviéndose. Creo que me rozaron en algún momento.";
-    string respuesta2_3 = "No. Me mantuve a distancia en todo momento.";
+    string respuesta2_1 = "Sí, era parte del protocolo. Pero creo estar completamente bien."; //RIESGO ALTO
+    string respuesta2_2 = "Tal vez… Había gente moviéndose. Creo que me rozaron en algún momento."; //RIESGO MEDIO
+    string respuesta2_3 = "No. Me mantuve a distancia en todo momento."; //RIESGO NULO
 
     //PREGUNTAS SEGUN RAMA
     string preguntaRamaCotidiana = "Desde la fuga… ¿has sentido alguna molestia o cambio, aunque sea algo pequeño?";
@@ -53,38 +55,40 @@ public class LVL1QuestionsController : MonoBehaviour
     string preguntaRamaConfusionNeurologica = "¿Te has sentido raro desde el incidente? Mareos, temblores o problemas para concentrarte.";
 
     //RESPUESTAS SEGUN PREGUNTA POR RAMAS
-    string respuestaCotidiana1 = "Sí, un poco de irritación en la piel por los nervios, supongo.";
-    string respuestaCotidiana2 = "He tenido tensión muscular, pero llevo horas en esta silla.";
-    string respuestaCotidiana3 = "No, me siento perfectamente.";
+    string respuestaCotidiana1 = "No, me siento perfectamente.";
+    string respuestaCotidiana2 = "He tenido tensión muscular, además llevo horas en esta silla.";
+    string respuestaCotidiana3 = "Sí, un poco de irritación en la piel por los nervios, supongo.";
 
-    string respuestaContactoDirecto1 = "Sí, uno de los tubos reventó y me salpicó un poco, pero fue mínimo.";
-    string respuestaContactoDirecto2 = "No estoy seguro… Había vapor, golpes, gente gritando.";
-    string respuestaContactoDirecto3 = "No, solo me acerqué unos segundos a revisar una alarma.";
+    string respuestaContactoDirecto1 = "No, solo me acerqué unos segundos a revisar una alarma.";
+    string respuestaContactoDirecto2 = "No estoy seguro… me perdí por el ruido de la alarma y gente gritando.";
+    string respuestaContactoDirecto3 = "Sí, uno de los tubos reventó y me salpicó un poco, creo que fue mínimo.";
 
-    string respuestaConfusionNeurologica1 = "Sí… siento como… nublado. Es difícil explicarlo.";
+    string respuestaConfusionNeurologica1 = "No, estoy bien… creo… solo necesito un momento.";
     string respuestaConfusionNeurologica2 = "Solo dolor de cabeza. Debe ser estrés.";
-    string respuestaConfusionNeurologica3 = "No, estoy bien… creo… solo necesito un momento.";
+    string respuestaConfusionNeurologica3 = "Sí… siento como… nublado. Es difícil explicarlo.";
 
     //PREGUNTAS SEGUN RIESGO
-    string preguntaRiesgoNegado = "Desde la fuga… ¿has sentido alguna molestia o cambio, aunque sea algo pequeño?";
-    string preguntaRiesgoMedio = "¿Hubo algún tipo de exposición a sangre, fluidos o a la zona dañada del contenedor?";
-    string preguntaRiesgoAlto = "¿Te has sentido raro desde el incidente? Mareos, temblores o problemas para concentrarte.";
+    string preguntaRiesgoNegado = "¿Qué hizo que no estuvieras en la zona afectada?";
+    string preguntaRiesgoMedio = "¿Reconoces a la persona que pudo haber tenido el contacto?¿O a las personas que estaban cerca?";
+    string preguntaRiesgoAlto = "¿Consideras que ello puede influir en lo que estás diciendo?";
 
     //RESPUESTAS SEGUN PREGUNTA POR RIESGO
-    string respuestaRiesgoNegado_SospechaBAJA = "Sí, un poco de irritación en la piel por los nervios, supongo.";
-    string respuestaRiesgoNegado_SospechaMEDIA = "He tenido tensión muscular, pero llevo horas en esta silla.";
-    string respuestaRiesgoNegado_SospechaALTA = "No, me siento perfectamente.";
+    string respuestaRiesgoNegado_SospechaBAJA = "Estaba preparando los informes según el protocolo.";
+    string respuestaRiesgoNegado_SospechaMEDIA = "Me dió algo de temor, llevo poco tiempo trabajando y es la primera vez que veo algo así.";
+    string respuestaRiesgoNegado_SospechaALTA = "Acababa de salir de allí, no vi necesario volver.";
 
-    string respuestaRiesgoMedio_SospechaBAJA = "Sí, uno de los tubos reventó y me salpicó un poco, pero fue mínimo.";
-    string respuestaRiesgoMedio_SospechaMEDIA = "No estoy seguro… Había vapor, golpes, gente gritando.";
-    string respuestaRiesgoMedio_SospechaALTA = "No, solo me acerqué unos segundos a revisar una alarma.";
+    string respuestaRiesgoMedio_SospechaBAJA = "No recuerdo bien pero creo que era alguien antiguo en el laboratorio";
+    string respuestaRiesgoMedio_SospechaMEDIA = "Recuerdo haber visto varias personas salir de la zona pero solo eso..";
+    string respuestaRiesgoMedio_SospechaALTA = "No, tengo la mente bastante en blanco ahora mismo.";
 
-    string respuestaRiesgoAlto_SospechaBAJA = "Sí… siento como… nublado. Es difícil explicarlo.";
-    string respuestaRiesgoAlto_SospechaMEDIA = "Solo dolor de cabeza. Debe ser estrés.";
-    string respuestaRiesgoAlto_SospechaALTA = "No, estoy bien… creo… solo necesito un momento.";
+    string respuestaRiesgoAlto_SospechaBAJA = "No, estoy conciente de lo que digo, me siento capaz de cualquier actividad intelectual o física.";
+    string respuestaRiesgoAlto_SospechaMEDIA = "Estoy nervioso por estar en este cuarto frío, nervioso...";
+    string respuestaRiesgoAlto_SospechaALTA = "Yo… ¿Por qué me están juzgando tanto?";
 
     private void Start()
     {
+        respuesta.text = "...";
+
         panelQuestions.SetActive(false);
         isOpenQUESTIONS = false;
 
@@ -188,6 +192,9 @@ public class LVL1QuestionsController : MonoBehaviour
 
     public void Pregunta1() //PREGUNTA PRINCIPAL 1
     {
+        esPregunta1 = true;
+        esPregunta2 = false;
+
         if (infectado == false) //Si no está infectado
         {
             int numRndm = Random.Range(1, 3);
@@ -227,6 +234,9 @@ public class LVL1QuestionsController : MonoBehaviour
 
     public void Pregunta2() //PREGUNTA PRINCIPAL 2
     {
+        esPregunta1 = false;
+        esPregunta2 = true;
+
         if (infectado == false) //Si no está infectado
         {
             int numRndm = Random.Range(1, 3);
@@ -259,7 +269,7 @@ public class LVL1QuestionsController : MonoBehaviour
                 RiesgoALTO();
             }
         }
-        
+        SeleccionRIESGO();
         PreguntaUNICAGO();
         preguntaDobleButton2.interactable = false;
     }
@@ -280,6 +290,20 @@ public class LVL1QuestionsController : MonoBehaviour
         }
     }
 
+    public void SeleccionRespuesta()
+    {
+        if (esPregunta1 == true)
+        {
+            SeleccionRespuestaRAMA();
+        }
+        else if (esPregunta2 == true)
+        {
+            SeleccionRespuestaRIESGO();
+        }
+        PreguntaDOBLEGO();
+    }
+
+
     public void SeleccionRespuestaRAMA()
     {
         if (ramaCotidiana == true)
@@ -294,37 +318,26 @@ public class LVL1QuestionsController : MonoBehaviour
         {
             PreguntaRamaCNEUROLOGICA();
         }
+
+        PreguntaDOBLEGO();
     }
 
     public void PreguntaRamaCOTIDIANA()
     {
-        if (infectado == false) //Si no está infectado
-        {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
+        int numRndm = Random.Range(1, 4);
+        Debug.Log(numRndm);
 
-            if (numRndm % 2 == 0) //Si es par, sosprecha baja
-            {
-                respuesta.text = respuestaCotidiana1;
-            }
-            else //Si es impar, respuesta sospecha media
-            {
-                respuesta.text = respuestaCotidiana2;
-            }
+        if (numRndm == 1)
+        {
+            respuesta.text = respuestaCotidiana1;
         }
-        else //SI ESTA INFECTADO
+        else if (numRndm == 2)
         {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
-
-            if (numRndm % 2 == 0) //Si es par, respuesta sospecha media
-            {
-                respuesta.text = respuestaCotidiana2;
-            }
-            else //Si es impar, respuesta sospecha muy alta
-            {
-                respuesta.text = respuestaCotidiana3;
-            }
+            respuesta.text = respuestaCotidiana2;
+        }
+        else if (numRndm == 3)
+        {
+            respuesta.text = respuestaCotidiana3;
         }
     }
 
@@ -362,33 +375,20 @@ public class LVL1QuestionsController : MonoBehaviour
 
     public void PreguntaRamaCNEUROLOGICA()
     {
-        if (infectado == false) //Si no está infectado
-        {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
+        int numRndm = Random.Range(1, 4);
+        Debug.Log(numRndm);
 
-            if (numRndm % 2 == 0) //Si es par, sosprecha baja
-            {
-                respuesta.text = respuestaConfusionNeurologica1;
-            }
-            else //Si es impar, respuesta sospecha media
-            {
-                respuesta.text = respuestaConfusionNeurologica2;
-            }
+        if (numRndm == 1)
+        {
+            respuesta.text = respuestaConfusionNeurologica1;
         }
-        else //SI ESTA INFECTADO
+        else if (numRndm == 2)
         {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
-
-            if (numRndm % 2 == 0) //Si es par, respuesta sospecha media
-            {
-                respuesta.text = respuestaConfusionNeurologica2;
-            }
-            else //Si es impar, respuesta sospecha muy alta
-            {
-                respuesta.text = respuestaConfusionNeurologica3;
-            }
+            respuesta.text = respuestaConfusionNeurologica2;
+        }
+        else if (numRndm == 3)
+        {
+            respuesta.text = respuestaConfusionNeurologica3;
         }
     }
 
@@ -412,111 +412,72 @@ public class LVL1QuestionsController : MonoBehaviour
     {
         if (riesgoNulo == true)
         {
-
+            RespuestaRiesgoNEGADO();
         }
         else if (riesgoMedio == true)
         {
-
+            RespuestaRiesgoMEDIO();
         }
         else if (riesgoAlto == true)
         {
-
+            RespuestaRiesgoALTO();
         }
     }
 
     public void RespuestaRiesgoNEGADO()
     {
-        if (infectado == false) //Si no está infectado
-        {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
+        int numRndm = Random.Range(1, 4);
+        Debug.Log(numRndm);
 
-            if (numRndm % 2 == 0) //Si es par, sosprecha baja
-            {
-                respuesta.text = respuestaRiesgoNegado_SospechaBAJA;
-            }
-            else //Si es impar, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoNegado_SospechaMEDIA;
-            }
+        if (numRndm == 1)
+        {
+            respuesta.text = respuestaRiesgoNegado_SospechaBAJA;
         }
-        else //SI ESTA INFECTADO
+        else if (numRndm == 2)
         {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
-
-            if (numRndm % 2 == 0) //Si es par, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoNegado_SospechaMEDIA;
-            }
-            else //Si es impar, respuesta sospecha muy alta
-            {
-                respuesta.text = respuestaRiesgoNegado_SospechaALTA;
-            }
+            respuesta.text = respuestaRiesgoNegado_SospechaMEDIA;
+        }
+        else if (numRndm == 3)
+        {
+            respuesta.text = respuestaRiesgoNegado_SospechaALTA;
         }
     }
 
     public void RespuestaRiesgoMEDIO()
     {
-        if (infectado == false) //Si no está infectado
-        {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
+        int numRndm = Random.Range(1, 4);
+        Debug.Log(numRndm);
 
-            if (numRndm % 2 == 0) //Si es par, sosprecha baja
-            {
-                respuesta.text = respuestaRiesgoMedio_SospechaBAJA;
-            }
-            else //Si es impar, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoMedio_SospechaMEDIA;
-            }
+        if (numRndm == 1)
+        {
+            respuesta.text = respuestaRiesgoMedio_SospechaBAJA;
         }
-        else //SI ESTA INFECTADO
+        else if (numRndm == 2)
         {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
-
-            if (numRndm % 2 == 0) //Si es par, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoMedio_SospechaMEDIA;
-            }
-            else //Si es impar, respuesta sospecha muy alta
-            {
-                respuesta.text = respuestaRiesgoMedio_SospechaALTA;
-            }
+            respuesta.text = respuestaRiesgoMedio_SospechaMEDIA;
+        }
+        else if (numRndm == 3)
+        {
+            respuesta.text = respuestaRiesgoMedio_SospechaALTA;
         }
     }
 
     public void RespuestaRiesgoALTO()
     {
-        if (infectado == false) //Si no está infectado
-        {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
+        int numRndm = Random.Range(1, 4);
+        Debug.Log(numRndm);
 
-            if (numRndm % 2 == 0) //Si es par, sosprecha baja
-            {
-                respuesta.text = respuestaRiesgoAlto_SospechaBAJA;
-            }
-            else //Si es impar, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoAlto_SospechaMEDIA;
-            }
+        if (numRndm == 1) 
+        {
+            respuesta.text = respuestaRiesgoAlto_SospechaBAJA;
         }
-        else //SI ESTA INFECTADO
+        else if (numRndm == 2) 
         {
-            int numRndm = Random.Range(1, 3);
-            Debug.Log(numRndm);
-
-            if (numRndm % 2 == 0) //Si es par, respuesta sospecha media
-            {
-                respuesta.text = respuestaRiesgoAlto_SospechaMEDIA;
-            }
-            else //Si es impar, respuesta sospecha muy alta
-            {
-                respuesta.text = respuestaRiesgoAlto_SospechaALTA;
-            }
+            respuesta.text = respuestaRiesgoAlto_SospechaMEDIA;
+        }
+        else if (numRndm == 3)
+        {
+            respuesta.text = respuestaRiesgoAlto_SospechaALTA;
         }
     }
 }
