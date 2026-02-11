@@ -1987,6 +1987,22 @@ PrefabInstance:
       propertyPath: panelBrightnessGame
       value: 
       objectReference: {fileID: 859349830}
+    - target: {fileID: 3958787815528609016, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 1836.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958787815528609016, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 989.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958787815528609016, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3958787815528609016, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4609778806058417845, guid: 5a1e1334241c46c4eb68a0d53b9b8584, type: 3}
       propertyPath: m_Camera
       value: 

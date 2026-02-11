@@ -32,7 +32,7 @@ public class MovementMinigame : MonoBehaviour
         else if (collision.CompareTag("Entrada1"))
         {
             Debug.Log("entrada");
-            SceneManager.LoadScene("Diseño de Nivel 1");
+            SceneManager.LoadScene("Level 1");
         }
         else if (collision.CompareTag("Entrance3"))
         {

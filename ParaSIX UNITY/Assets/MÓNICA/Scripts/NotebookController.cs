@@ -45,6 +45,5 @@ public class NotebookController : MonoBehaviour
     public void CloseNOTEBOOK()
     {
         notebookUI.SetActive(false);
-        gameUI.SetActive(true);
     }
 }

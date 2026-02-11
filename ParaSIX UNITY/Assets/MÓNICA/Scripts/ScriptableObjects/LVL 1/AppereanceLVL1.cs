@@ -2,24 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public enum Appereance
+public enum type
 {
-    HandLEFT, HandRIGHT, FootLeft, FootRight
+    infected, civilian
 }
 
 [CreateAssetMenu(fileName = "New Patient", menuName = "Patient")]
 
 public class AppereanceLVL1 : ScriptableObject
 {
-    public Appereance appereance;
+    public string namePatient;
 
-    public Sprite frontDetail;
-    public Sprite front;
+    public type type;
+
+    [Space]
+
     public Sprite face;
     public Sprite leftHand;
     public Sprite rightHand;
     public Sprite leftFoot;
     public Sprite rightFoot;
+    [Space]
 
     public Sprite patientBG;
 }

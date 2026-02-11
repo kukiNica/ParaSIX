@@ -5,73 +5,20 @@ using UnityEngine.SceneManagement;
 
 public class MovimientoDoctor : MonoBehaviour
 {
-    [SerializeField] private float speed;
-
-    float velocityX;
-
-    private List<Vector2> waypoints = new List<Vector2>();
-    private Vector2 newWaypoint;
-    private Camera cam;
-
-    int cont = 0;
-
-    void Start()
-    {
-        cam = Camera.main;
-    }
+    float velocity = 0.05f;
 
     void Update()
     {
-        /*if (cont < 3)
-        {
-            if (Input.GetMouseButtonDown(0))
-            {
-                newWaypoint = cam.ScreenToWorldPoint(Input.mousePosition);
-                waypoints.Add(newWaypoint);
-                cont++;
-                Debug.Log(cont);
-            }
-        }*/
-
-        if (Input.GetMouseButtonDown(0))
-        {
-            newWaypoint = cam.ScreenToWorldPoint(Input.mousePosition);
-            waypoints.Add(newWaypoint);
-            cont++;
-        }
-
-        Move();
+        Movement();
     }
 
-    private void Move()
+    public void Movement()
     {
-        if (waypoints.Count == 0)
-        {
-            return;
-        }
+        float velocityX = Input.GetAxis("Horizontal") * velocity;
+        float velocityY = Input.GetAxis("Vertical") * velocity;
 
-        velocityX = transform.position.x * speed;
+        Vector2 position = transform.position;
 
-        transform.position = Vector2.MoveTowards(transform.position, newWaypoint, speed * Time.deltaTime);
-
-        
-        if ((Vector2)transform.position == waypoints[0])
-        {
-            waypoints.RemoveAt(0);
-            cont--;
-        }
+        transform.position = new Vector2(velocityX + position.x, position.y);
     }
-
-    /*
-    private void OnDrawGizmos()
-    {
-        Gizmos.color = Color.red;
-
-        foreach(Vector2 waypoint in waypoints)
-        {
-            Gizmos.DrawSphere(waypoint, 0.1f);
-        }
-    }*/
-
-    
 }

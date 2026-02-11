@@ -28,33 +28,46 @@ public class Level1Controller : MonoBehaviour
     public static bool isClosePC = false;
 
     //DECIDE
-    public Button buttonDecide;
-    public GameObject areaDecide;
-    public GameObject decide;
-
-    float distanceDecide;
-    bool isCloseDecide = false;
-
     public GameObject decidePanel;
-    bool isOpenDecidePanel = false;
+    public GameObject decidePanelMini;
 
     //CHARACTERS
     int cont = 0;
     public TMP_Text textCont;
+    [Space]
+
+    public static AppereanceLVL1 patientNum;
+    public AppereanceLVL1 patient1;
+    public AppereanceLVL1 patient2;
+    public AppereanceLVL1 patient3;
+    [Space]
+
+    public Button buttonkill;
+    public Button buttonlive;
+
+    public Image appereanceBackground;
+    public Image questionsBackground;
 
     void Start()
     {
+        patientNum = patient1;
+
         talk.SetActive(false);
         PC.gameObject.SetActive(false);
 
         decidePanel.SetActive(false);
+
+        appereanceBackground.sprite = patientNum.patientBG;
+        questionsBackground.sprite = patientNum.patientBG;
+
+        buttonkill.gameObject.SetActive(false);
+        buttonlive.gameObject.SetActive(false);
     }
 
     void Update()
     {
         distance = Vector2.Distance(area.transform.position, player.transform.position);
         distancePC = Vector2.Distance(areaPC.transform.position, player.transform.position);
-        distanceDecide = Vector2.Distance(areaDecide.transform.position, player.transform.position);
 
         //TALK
         if (distance <= 1.9f)
@@ -74,25 +87,6 @@ public class Level1Controller : MonoBehaviour
         else
         {
             ClosePCDistance();
-        }
-
-        //DECIDE
-        if (distanceDecide <= 1.9f)
-        {
-            ActiveDecide();
-        }
-        else
-        {
-            CloseDecide();
-        }
-
-        if (Input.GetKeyDown(KeyCode.E) && isOpenDecidePanel == false && isCloseDecide == true)
-        {
-            OpenDecidePanel();
-        }
-        else if (Input.GetKeyDown(KeyCode.E) && isOpenDecidePanel == true && isCloseDecide == true)
-        {
-            CloseDecidePanel();
         }
     }
 
@@ -120,32 +114,6 @@ public class Level1Controller : MonoBehaviour
         isClosePC = false;
     }
 
-    public void ActiveDecide()
-    {
-        decide.SetActive(true);
-        isCloseDecide = true;
-    }
-
-    public void CloseDecide()
-    {
-        decide.SetActive(false);
-        isCloseDecide = false;
-    }
-
-    public void OpenDecidePanel()
-    {
-        decidePanel.SetActive(true);
-        Time.timeScale = 0f;
-        isOpenDecidePanel = true;
-    }
-
-    public void CloseDecidePanel()
-    {
-        decidePanel.SetActive(false);
-        Time.timeScale = 1f;
-        isOpenDecidePanel = false;
-    }
-
     public void AddChars()
     {
         cont++;
@@ -157,24 +125,64 @@ public class Level1Controller : MonoBehaviour
             SceneManager.LoadScene("Map");
         }
     }
-
-    public void Kill()
-    {
-        AddChars();
-
-        CloseDecidePanel();
-    }
-
-    public void Alive()
-    {
-        AddChars();
-
-        CloseDecidePanel();
-    }
-
     public static void UnlockLVL2()
     {
         GameController.LVL2Unlocked = true;
         SceneManager.LoadScene("Map");
+    }
+
+    public void OpenDecidePanel()
+    {
+        if (decidePanel.activeInHierarchy)
+        {
+            decidePanel.SetActive(false);
+            buttonkill.gameObject.SetActive(false);
+            buttonlive.gameObject.SetActive(false);
+
+            decidePanelMini.SetActive(true);
+        }
+        else
+        {
+            decidePanel.SetActive(true);
+            buttonkill.gameObject.SetActive(true);
+            buttonlive.gameObject.SetActive(true);
+
+            decidePanelMini.SetActive(false);
+        }
+    }
+    public void KillButton()
+    {
+        Debug.Log("kill");
+        if (patientNum == patient1)
+        {
+            patientNum = patient2;
+        }
+        else if (patientNum == patient2)
+        {
+            patientNum = patient3;
+        }
+        else if (patientNum == patient3)
+        {
+            SceneManager.LoadScene("Map");
+            GameController.LVL3Unlocked = true;
+        }
+    }
+
+    public void LiveButton()
+    {
+        Debug.Log("live");
+        if (patientNum == patient1)
+        {
+            patientNum = patient2;
+        }
+        else if (patientNum == patient2)
+        {
+            patientNum = patient3;
+        }
+        else if (patientNum == patient3)
+        {
+            GameController.LVL3Unlocked = true;
+            SceneManager.LoadScene("Map");
+        }
     }
 }

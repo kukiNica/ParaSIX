@@ -9,11 +9,6 @@ public class AppereanceController : MonoBehaviour
     public GameObject questionsCanva;
 
     public Image pic;
-    public Sprite spriteLF;
-    public Sprite spriteRF;
-    public Sprite spriteLH;
-    public Sprite spriteRH;
-    public Sprite spriteHead;
 
     public static bool isOpenAP;
 
@@ -55,23 +50,23 @@ public class AppereanceController : MonoBehaviour
     {
         if (type == "LeftHand")
         {
-            pic.sprite = spriteLH;
+            pic.sprite = Level1Controller.patientNum.leftHand;
         }
         else if (type == "RightHand")
         {
-            pic.sprite = spriteRH;
+            pic.sprite = Level1Controller.patientNum.rightHand;
         }
         else if (type == "LeftFoot")
         {
-            pic.sprite = spriteLF;
+            pic.sprite = Level1Controller.patientNum.leftFoot;
         }
         else if (type == "RightFoot")
         {
-            pic.sprite = spriteRF;
+            pic.sprite = Level1Controller.patientNum.rightFoot;
         }
         else if (type == "Head")
         {
-            pic.sprite = spriteHead;
+            pic.sprite = Level1Controller.patientNum.face;
         }
     }
 }
