@@ -11,6 +11,7 @@ public class LVL1QuestionsController : MonoBehaviour
     public GameObject game;
     public GameObject panelQuestions;
     public GameObject appereanceCanva;
+    public GameObject decidePanelMini;
     [Space]
 
     [Header("Textos")]
@@ -117,6 +118,7 @@ public class LVL1QuestionsController : MonoBehaviour
     public void OpenQUESTIONS()
     {
         panelQuestions.SetActive(true);
+        decidePanelMini.SetActive(true);
         isOpenQUESTIONS = true;
 
         game.SetActive(false);

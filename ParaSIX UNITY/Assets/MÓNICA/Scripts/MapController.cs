@@ -13,11 +13,20 @@ public class MapController : MonoBehaviour
         //MAP SCENE
         if (GameController.LVL3Unlocked == false)
         {
-            buttonLVL3.gameObject.SetActive(false);
+            buttonLVL3.enabled = false;
         }
         else
         {
-            buttonLVL3.gameObject.SetActive(true);
+            buttonLVL3.enabled = true;
+        }
+
+        if (GameController.LVL1Unlocked == false)
+        {
+            buttonLVL1.enabled = false;
+        }
+        else
+        {
+            buttonLVL1.enabled = true;
         }
     }
 }

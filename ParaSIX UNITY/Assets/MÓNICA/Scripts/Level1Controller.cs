@@ -9,6 +9,7 @@ public class Level1Controller : MonoBehaviour
 {
     //GAME
     public GameObject game;
+    [Space]
 
     //TALK
     public Button buttonTalk;
@@ -18,6 +19,7 @@ public class Level1Controller : MonoBehaviour
 
     public static float distance;
     public static bool isClose = false;
+    [Space]
 
     //PC
     public Button buttonPC;
@@ -26,10 +28,20 @@ public class Level1Controller : MonoBehaviour
 
     public static float distancePC;
     public static bool isClosePC = false;
+    [Space]
 
     //DECIDE
     public GameObject decidePanel;
     public GameObject decidePanelMini;
+    [Space]
+
+    public GameObject confirmar;
+    public GameObject killFINAL;
+    public GameObject liveFINAL;
+    [Space]
+
+    //QUESTIONS
+    public GameObject questionsCanvas;
 
     //CHARACTERS
     int cont = 0;
@@ -59,9 +71,6 @@ public class Level1Controller : MonoBehaviour
 
         appereanceBackground.sprite = patientNum.patientBG;
         questionsBackground.sprite = patientNum.patientBG;
-
-        buttonkill.gameObject.SetActive(false);
-        buttonlive.gameObject.SetActive(false);
     }
 
     void Update()
@@ -136,53 +145,102 @@ public class Level1Controller : MonoBehaviour
         if (decidePanel.activeInHierarchy)
         {
             decidePanel.SetActive(false);
-            buttonkill.gameObject.SetActive(false);
-            buttonlive.gameObject.SetActive(false);
 
             decidePanelMini.SetActive(true);
         }
         else
         {
             decidePanel.SetActive(true);
-            buttonkill.gameObject.SetActive(true);
-            buttonlive.gameObject.SetActive(true);
+            confirmar.SetActive(false);
 
             decidePanelMini.SetActive(false);
         }
     }
-    public void KillButton()
+    public void KillButtonFINAL()
     {
         Debug.Log("kill");
         if (patientNum == patient1)
         {
             patientNum = patient2;
+
+            questionsCanvas.SetActive(false);
+            confirmar.SetActive(false);
+            decidePanel.SetActive(false);
+            game.SetActive(true);
         }
         else if (patientNum == patient2)
         {
             patientNum = patient3;
+
+            questionsCanvas.SetActive(false);
+            confirmar.SetActive(false);
+            decidePanel.SetActive(false);
+            game.SetActive(true);
         }
         else if (patientNum == patient3)
         {
-            SceneManager.LoadScene("Map");
             GameController.LVL3Unlocked = true;
+            GameController.LVL1Unlocked = false;
+
+            SceneManager.LoadScene("Map");
         }
     }
 
-    public void LiveButton()
+    public void LiveButtonFINAL()
     {
         Debug.Log("live");
         if (patientNum == patient1)
         {
             patientNum = patient2;
+
+            questionsCanvas.SetActive(false);
+            confirmar.SetActive(false);
+            decidePanel.SetActive(false);
+            game.SetActive(true);
         }
         else if (patientNum == patient2)
         {
             patientNum = patient3;
+
+            questionsCanvas.SetActive(false);
+            confirmar.SetActive(false);
+            decidePanel.SetActive(false);
+            game.SetActive(true);
         }
         else if (patientNum == patient3)
         {
             GameController.LVL3Unlocked = true;
+            GameController.LVL1Unlocked = false;
+
             SceneManager.LoadScene("Map");
+        }
+    }
+
+    public void DieGO()
+    {
+        if (confirmar.activeInHierarchy)
+        {
+            confirmar.SetActive(false);
+        }
+        else
+        {
+            confirmar.SetActive(true);
+            killFINAL.SetActive(true);
+            liveFINAL.SetActive(false);
+        }
+    }
+
+    public void LiveGO()
+    {
+        if (confirmar.activeInHierarchy)
+        {
+            confirmar.SetActive(false);
+        }
+        else
+        {
+            confirmar.SetActive(true);
+            killFINAL.SetActive(false);
+            liveFINAL.SetActive(true);
         }
     }
 }

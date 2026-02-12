@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   namePatient: Sebas
   type: 1
-  face: {fileID: 0}
-  leftHand: {fileID: 0}
-  rightHand: {fileID: 0}
-  leftFoot: {fileID: 0}
-  rightFoot: {fileID: 0}
+  face: {fileID: -5156993582514690110, guid: 28001e7515f3d2f45bac9a8bdde7c4ed, type: 3}
+  leftHand: {fileID: -3813476520240876057, guid: 03407c9914c2e6345833f30596eea94e, type: 3}
+  rightHand: {fileID: 3536871453942003850, guid: b9b178792ab4d6044a74aaade26c3b21, type: 3}
+  leftFoot: {fileID: 276335298428900667, guid: 939660a4742ef1d45985e01c003518ea, type: 3}
+  rightFoot: {fileID: -600388125610132204, guid: 0bbe0df8d144df74ea3a5071fcc0b4c6, type: 3}
   patientBG: {fileID: 21300000, guid: 0fb383204b3ff354c92e5690b52020bb, type: 3}
